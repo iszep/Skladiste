@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skladiste", "Skladiste\Skla
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{648D16E2-643B-4CF0-9755-2AA5866C7E0A}"
 	ProjectSection(SolutionItems) = preProject
-		READ.me = READ.me
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
