@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Skladiste.Models.Artikal>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:darkslategrey;">Artikli u skladištu</h1>
+
+<p>
+    <a asp-action="Create">Dodaj novi</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jedinica_Mjere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kolicina)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jedinica_Mjere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kolicina)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Preuredi</a> |
+                
+                <a asp-action="Delete" asp-route-id="@item.Id">Obriši</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
